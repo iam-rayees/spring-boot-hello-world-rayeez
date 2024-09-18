@@ -5,7 +5,6 @@ pipeline {
             agent {
                 docker {
                     image 'maven:3.8.6-openjdk-11'
-                    // No need for label
                 }
             }
             steps {
@@ -17,7 +16,6 @@ pipeline {
             agent {
                 docker {
                     image 'maven:3.8.6-openjdk-11'
-                    // No need for label
                 }
             }
             steps {
@@ -29,8 +27,6 @@ pipeline {
             agent {
                 docker {
                     image 'maven:3.8.6-openjdk-11'
-                    //args '-p 8000:8000' // Expose port
-                    // No need for label
                 }
             }
             steps {
