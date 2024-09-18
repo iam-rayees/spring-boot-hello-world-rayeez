@@ -4,7 +4,7 @@ pipeline {
          stage('Maven Clean') {
             agent {
                 docker {
-                    image 'maven:3.8.6-openjdk-11'
+                    image 'maven:3.8.6-openjdk-17'
                     // No need for label
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
         stage('Build with Maven') {
             agent {
                 docker {
-                    image 'maven:3.8.6-openjdk-11'
+                    image 'maven:3.8.6-openjdk-17'
                     // No need for label
                 }
             }
@@ -28,7 +28,7 @@ pipeline {
         stage('Run Spring Boot Application') {
             agent {
                 docker {
-                    image 'maven:3.8.6-openjdk-11'
+                    image 'maven:3.8.6-openjdk-17'
                     //args '-p 8000:8000' // Expose port
                     // No need for label
                 }
